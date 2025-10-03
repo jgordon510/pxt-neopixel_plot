@@ -410,7 +410,7 @@ namespace neopixel {
         //% blockId="neopixel_plot" block="%strip|plot at x %x|y %y|to %rgb=neopixel_colors"
         //% strip.defl=strip
         //% weight=4
-        //% parts="neopixel" advanced=true
+        //% parts="neopixel" advanced=false
         plot(x: number, y: number, rgb: number) {
             if (y % 2 == 0) {
                 this.setMatrixColor(x, y, rgb)
