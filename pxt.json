@@ -1,8 +1,7 @@
 {
-    "name": "neopixel_WS2812B",
-    "version": "0.1",
-    "description": "WS2812B NeoPixel driver",
-    "license": "MIT",
+    "name": "neopixel-ws2812b-jg",
+    "version": "0.1.0",
+    "public": true,
     "dependencies": {
         "core": "*",
         "ws2812b": "github:microsoft/pxt-ws2812b#v0.1.1"
@@ -14,7 +13,6 @@
     "testFiles": [
         "neotest.ts"
     ],
-    "public": true,
     "supportedTargets": [
         "microbit"
     ],
