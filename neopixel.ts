@@ -69,6 +69,25 @@ namespace neopixel {
         }
 
         /**
+         * Set LED to a given color (range 0-255 for r, g, b) in a matrix shaped strip
+         * You need to call ``show`` to make the changes visible.
+         * @param x horizontal position
+         * @param y horizontal position
+         * @param rgb RGB color of the LED
+         */
+        //% blockId="neopixel_plot" block="%strip|plot at x %x|y %y|to %rgb=neopixel_colors"
+        //% strip.defl=strip
+        //% weight=4
+        //% parts="neopixel"
+        plot(x: number, y: number, rgb: number) {
+            if (y % 2 == 0) {
+                this.setMatrixColor(x, y, rgb)
+            } else {
+                this.setMatrixColor(15-x, y, rgb)
+            }
+        }
+        
+        /**
          * Shows a rainbow pattern on all LEDs.
          * @param startHue the start hue value for the rainbow, eg: 1
          * @param endHue the end hue value for the rainbow, eg: 360
@@ -400,24 +419,7 @@ namespace neopixel {
                 + Math.idiv(p * 480, 10000); /* rought approximation */
         }
 
-        /**
-         * Set LED to a given color (range 0-255 for r, g, b) in a matrix shaped strip
-         * You need to call ``show`` to make the changes visible.
-         * @param x horizontal position
-         * @param y horizontal position
-         * @param rgb RGB color of the LED
-         */
-        //% blockId="neopixel_plot" block="%strip|plot at x %x|y %y|to %rgb=neopixel_colors"
-        //% strip.defl=strip
-        //% weight=4
-        //% parts="neopixel"
-        plot(x: number, y: number, rgb: number) {
-            if (y % 2 == 0) {
-                this.setMatrixColor(x, y, rgb)
-            } else {
-                this.setMatrixColor(15-x, y, rgb)
-            }
-        }
+        
 
         private setBufferRGB(offset: number, red: number, green: number, blue: number): void {
             if (this._mode === NeoPixelMode.RGB_RGB) {
