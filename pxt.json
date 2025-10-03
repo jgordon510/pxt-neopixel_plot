@@ -1,6 +1,6 @@
 {
     "name": "neopixel-ws2812b-jg",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "public": true,
     "dependencies": {
         "core": "*",
