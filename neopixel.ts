@@ -75,7 +75,7 @@ namespace neopixel {
          * @param y horizontal position
          * @param rgb RGB color of the LED
          */
-        //% blockId="neopixel_plot" block="%strip|plot at x %x|y %y|to %rgb=neopixel_colors"
+        //% blockId="neopixel_plot" block="%strip|plot at x %x|y %y| %rgb=neopixel_colors"
         //% strip.defl=strip
         //% weight=4
         //% parts="neopixel"
@@ -86,7 +86,7 @@ namespace neopixel {
                 this.setMatrixColor(15-x, y, rgb)
             }
         }
-        
+
         /**
          * Shows a rainbow pattern on all LEDs.
          * @param startHue the start hue value for the rainbow, eg: 1
