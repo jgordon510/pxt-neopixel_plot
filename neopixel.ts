@@ -80,7 +80,7 @@ namespace neopixel {
         //% weight=4
         //% parts="neopixel"
         plot(x: number, y: number, rgb: number) {
-            if (y % 2 == 0) {
+            if (y % 2 == 1) {
                 this.setMatrixColor(x, y, rgb)
             } else {
                 this.setMatrixColor(15-x, y, rgb)
