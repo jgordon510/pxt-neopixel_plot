@@ -81,9 +81,9 @@ namespace neopixel {
         //% parts="neopixel"
         plot(x: number, y: number, rgb: number) {
             if (y % 2 == 1) {
-                this.setMatrixColor(x, 15-y, rgb)
+                this.setMatrixColor(x, y, rgb)
             } else {
-                this.setMatrixColor(15-x, 15-y, rgb)
+                this.setMatrixColor(15-x, y, rgb)
             }
         }
 
